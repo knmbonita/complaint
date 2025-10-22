@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Complaints</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Topbar with user icon and archive tab -->
+  <div class="admin-topbar">
+    <span class="logo">Admin Dashboard</span>
+    <div class="admin-tabs">
+      <button class="tab-btn active" onclick="showTab('dashboard')">Complaints</button>
+      <button class="tab-btn" onclick="showTab('archived')">Archived Complaints</button>
+    </div>
+    <span class="material-icons admin-user-icon" title="Log out" onclick="logout()">person</span>
+  </div>
+
+  <!-- Tab content: Complaints Table -->
+  <section id="dashboard" class="tab-content" style="display: block;">
+    <div class="table-toolbar">
+      <button class="sort-btn" onclick="sortByProgress()">
+        <span class="material-icons" style="vertical-align:middle">filter_list</span>
+        Sort by Progress
+      </button>
+    </div>
+    <table class="complaints-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Contact</th>
+          <th>Complaint</th>
+          <th>Progress</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="complaintRows">
+        <!-- Fill with JS from CSV/backend -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Tab content: Archived Complaints Table -->
+  <section id="archived" class="tab-content">
+    <table class="complaints-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Contact</th>
+          <th>Complaint</th>
+          <th>Resolved On</th>
+        </tr>
+      </thead>
+      <tbody id="archiveRows">
+        <!-- Fill with JS from archive CSV/backend -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

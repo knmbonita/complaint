@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f6fb;
+}
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #22223b;
+  color: #fff;
+  padding: 1.1rem 2.5rem;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 18px #22223b11;
+}
+.logo {
+  font-weight: 700;
+}
+.admin-tabs {
+  display: flex;
+  gap: 1.4rem;
+}
+.tab-btn {
+  background: none;
+  border: 2px solid #f08a5d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 18px;
+  padding: .4em 1.6em;
+  margin-right: 0.35rem;
+  transition: background 0.1s, color 0.2s;
+  cursor: pointer;
+}
+.tab-btn.active,
+.tab-btn:hover {
+  background: #f08a5d;
+  color: #fff;
+}
+.admin-user-icon {
+  font-size: 2.15rem;
+  cursor: pointer;
+  padding: .3em .5em;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+.admin-user-icon:hover {
+  background: #2f3149;
+}
+.table-toolbar {
+  margin: 1.5rem 0 .7rem 2rem;
+}
+.sort-btn {
+  padding: .5em 1.2em;
+  background: #e0e1ee;
+  color: #232647;
+  border: none;
+  font-size: 1rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.18s;
+}
+.sort-btn:hover {
+  background: #f08a5d;
+  color: #fff;
+}
+.complaints-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 0 auto 2.5rem;
+  background: #fff;
+  box-shadow: 0 4px 32px #23223b10;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.complaints-table th, .complaints-table td {
+  padding: 1em 0.5em;
+  border-bottom: 1px solid #ededed;
+  text-align: left;
+  font-size: 1.08rem;
+}
+.complaints-table th {
+  background: #f7f8fa;
+  color: #22223b;
+  font-weight: bold;
+  letter-spacing: .025em;
+}
+.complaints-table tr:last-child td {
+  border-bottom: none;
+}
+.progress-dropdown, .progress-chip {
+  font-weight: bold;
+  padding: .4em 1.3em;
+  border-radius: 16px;
+  border: none;
+  background: #e0e1ee;
+  color: #22223b;
+  font-size: .96rem;
+  cursor: pointer;
+}
+.progress-pending { background: #fff0c2; color: #a58000; }
+.progress-ongoing { background: #bbdefb; color: #153359; }
+.progress-resolved { background: #c8e6c9; color: #165500; }
+.action-archive, .action-delete {
+  background: #fa5252;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.36em 0.55em;
+  margin-left: 0.35em;
+  transition: background 0.14s;
+}
+.action-archive:hover, .action-delete:hover {
+  background: #f08a5d;
+}
+.tab-content {
+  display: none;
+  padding-top: 2.4rem;
+}
+.tab-content:target, .tab-content[style*="display: block"] {
+  display: block;
+}
+@media (max-width: 800px) {
+  .admin-topbar { flex-direction: column; align-items: flex-start; padding: 1.1rem 1rem;}
+  .complaints-table, .complaints-table th, .complaints-table td { font-size: 0.95rem;}
+}
